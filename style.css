@@ -7,10 +7,12 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 body,
 html {
     overflow-x: hidden;
 }
+
 header {
     background-color: #1d3557;
     padding: 10px 20px;
@@ -131,65 +133,33 @@ section ul li {
     margin-bottom: 20px;
 }
 
-.skills {
-    margin-bottom: 40px;
-    background: rgba(255, 255, 255, 0.1);
+.skills-section {
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    animation: fadeInUp 1s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.skills .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill p {
+    margin: 0 0 5px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 20px;
     width: 100%;
 }
 
-.skills .skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    width: 150px;
-}
-
-.skills .skill .skill-name {
-    margin-top: 10px;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-align: center;
-}
-
-.radial-progress {
-    --progress: calc(var(--value) * 1%);
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: conic-gradient(#5199E4 var(--progress), rgba(29, 53, 87, 0.3) 0);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, background 0.3s;
-}
-
-.radial-progress::after {
-    content: attr(data-progress) '%';
-    position: absolute;
-    font-size: 1.2em;
-    color: #fff;
-}
-
-.radial-progress:hover {
-    transform: scale(1.1);
+.progress {
+    background-color: #1d3557;
+    height: 100%;
+    width: 0;
+    border-radius: 20px;
+    transition: width 1s ease-in-out;
 }
 
 .education {
@@ -322,6 +292,7 @@ section ul li {
     border-radius: 10px;
     margin-top: 10px;
 }
+
 /* contact */
 .contact {
     padding: 50px 0;
@@ -421,7 +392,8 @@ footer {
     margin: 0;
     font-size: 1em;
 }
-.footer-icons{
+
+.footer-icons {
     margin-top: 10px;
 }
 
